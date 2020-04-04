@@ -123,10 +123,10 @@ class Client extends EventEmitter {
             if (data.setPresence) {
               const config = getConfig()
               bot.user.setPresence({
-                status: config.bot.status,
+                status: "online",
                 activity: {
-                  name: config.bot.activityName,
-                  type: config.bot.activityType,
+                  name: "kang ketik",
+                  type: "PLAYING",
                   url: config.bot.streamActivityURL || undefined
                 }
               }).catch(err => this.log.warn({
